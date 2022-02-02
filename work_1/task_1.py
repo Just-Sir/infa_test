@@ -26,6 +26,8 @@ line(screen, (0, 0, 0), (250*1.3-28, 250*0.8-20), (425, 95), 17)
 
 # some new string
 v = 95
+# and another string
+v2 = 3 * 5
 
 pygame.display.update()
 clock = pygame.time.Clock()
