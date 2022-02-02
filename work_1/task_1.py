@@ -24,6 +24,8 @@ rect(screen, (0, 0, 0), (250*0.7, 250*1.3, 160, 30))
 line(screen, (0, 0, 0), (250*0.7+35, 250*0.8-20), (85, 85), 17)
 line(screen, (0, 0, 0), (250*1.3-28, 250*0.8-20), (425, 95), 17)
 
+# some new string
+v = 95
 
 pygame.display.update()
 clock = pygame.time.Clock()
