@@ -8,11 +8,19 @@ class Background:
         self.width_stripe = HEIGTH / self.n
                 
     def draw(self):
-        for i in range(self.n):
-            rect(
-            screen, (self.colorize()),
-            (0, self.width_stripe*i, WIDTH, self.width_stripe)
-            )
+        for i in range(self.n-1):
+            # Drawning upper stripes
+            if i is not self.n-2:
+                rect(
+                screen, (self.colorize()),
+                (0, self.width_stripe*i, WIDTH, self.width_stripe)
+                )
+            # Drawning the lower thick stripe
+            else:
+                rect(
+                screen, (self.colorize()),
+                (0, self.width_stripe*i, WIDTH, self.width_stripe*2)
+                )
              
     def colorize(self):
         color = ()
