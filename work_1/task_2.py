@@ -2,12 +2,12 @@ import random
 import pygame
 from pygame.draw import *
 
-class Background:
+class MyPicture:
     def __init__(self, n_stripes):
         self.n = n_stripes
         self.width_stripe = HEIGTH / self.n
                 
-    def draw(self):
+    def draw_bg(self):
         for i in range(self.n-1):
             # Drawning upper stripes
             if i is not self.n-2:
@@ -21,7 +21,13 @@ class Background:
                 screen, (self.colorize()),
                 (0, self.width_stripe*i, WIDTH, self.width_stripe*2)
                 )
-             
+    
+    def draw_mountians(self):
+        pass
+        
+    def draw_sun(self):
+        pass
+          
     def colorize(self):
         color = ()
         for i in range(3):
@@ -33,10 +39,10 @@ pygame.init()
 
 WIDTH, HEIGTH = 1280, 500
 FPS = 30
-bg = Background(5)
+picture = MyPicture(5)
 screen = pygame.display.set_mode((WIDTH, HEIGTH))
 
-bg.draw()
+picture.draw_bg()
 
 pygame.display.update()
 clock = pygame.time.Clock()
